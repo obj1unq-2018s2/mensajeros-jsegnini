@@ -2,7 +2,7 @@
 
 object roberto {
 	const pesoMensajero = 90
-	var vehiculo = bicicleta
+	var property vehiculo = bicicleta
 	method peso() {
 		return pesoMensajero + vehiculo.peso()
 	}
@@ -56,7 +56,18 @@ object paquete {
 //mensajeria
 
 object mensajeria {
+	var empleados = []
+	method nomina() {return empleados}
 	method contratar(alguien) {
- //
+		empleados.add(alguien)
  	}
+ 	method despedir(alguien) {
+ 		empleados.remove(alguien)
+ 	}
+ 	method despedirATodos() {
+ 		empleados = []
+ 	}
+ 	method esGrande() = empleados.size() > 2
+ 	method puedePrimerEmpleado() = paquete.puedeSerEnviadoPor(empleados.first())
+ 	method pesoUltimoEmpleado() {return empleados.last().peso()}
 }
