@@ -14,7 +14,8 @@ Del paquete conocemos su destino y si está pago o no. Puede entregarse cuando e
 
 **Mensajeros posibles:**
 
-- Roberto: viaja en bicicleta ó camión y debemos contar tanto su peso como el del transporte. La bicicleta pesa 8kg, mientras que el camión pesa media tonelada por cada acoplado. Roberto no tiene un mango, gracias que tiene cubiertas, y no puede llamar a nadie.
+- Roberto: viaja en bicicleta ó camión y debemos contar tanto su peso como el del transporte. La bicicleta pesa 8kg, mientras que el camión pesa media tonelada por cada acoplado. Roberto no 
+tiene un mango, gracias que tiene cubiertas, y no puede llamar a nadie.
 - Chuck Norris: pesa 900 kg y puede llamar a cualquier persona del universo con sólo llevarse el pulgar al oído y el meñique a la boca.
 - Neo: vuela, así que no pesa nada. Y anda con celular, el muy canchero. El tema es que a veces no tiene crédito.
 
@@ -42,21 +43,24 @@ Nuevos requerimientos para la mensajería, se necesita saber:
 - Si para la mensajería el paquete es fácil. El paquete es fácil cuando cualquiera de sus mensajeros puede entregarlo.
 - Saber los mensajeros candidatos de una mensajería para llevar un paquete, es decir, aquellos mensajeros que son capaces de llevar el paquete.
 - Saber si una mensajería tiene sobrepeso. Esto sucede si el promedio del peso de los mensajeros es superior a 500 Kg (Nota: Para el peso de Roberto se cuenta el transporte).
-- Hacer que la empresa de mensajería envíe el paquete. Para ello elige cualquier mensajero entre los que pueden enviarlo, y registra que fue enviado. En el caso de no haber nadie para enviarlo, debe informarse con un error descriptivo.
+- Hacer que la empresa de mensajería envíe el paquete. Para ello elige cualquier mensajero entre los que pueden enviarlo, y registra que fue enviado. En el caso de no haber nadie para enviarlo, 
+debe informarse con un error descriptivo.
 
 Cada punto debe tener mínimo un test
 
 ## Cuarta parte: Mensajería super recargada
 Surgen otros paquetes que la empresa necesita enviar. 
 * Paquetito: es gratis, o sea, no hace falta veriricar que este pago. Ademas, cualquier mensajero lo puede llevar.
-* Paqueton: puede tener más de un destino y para poder enviarse todos los destinos tienen que autorizar al mensajero a pasar. Su precio es 100$ por cada destino. Además, se puede ir pagando parcialmente. Obviamente tiene que estar totalmente pago para poder ser enviado.
+* Paqueton: puede tener más de un destino y para poder enviarse todos los destinos tienen que autorizar al mensajero a pasar. Su precio es 100$ por cada destino. Además, se puede ir pagando 
+parcialmente. Obviamente tiene que estar totalmente pago para poder ser enviado.
 
 A su vez, hay nuevos requerimientos para la mensajeria:
 - Agregarle una lista de los paquetes recibidos.
 - Hacer que se envien todos los paquetes recibidos que se puedan enviar, registrándolo adecuadamente.
 - Encontrar el paquete más caro (el paquete original tiene un precio variable).
 - Conocer todos los paquetes que fueron enviados por la mensajeria.
-- Saber el porcentaje de eficacia de la mensajería, es decir, el porcentaje de paquetes que lograron ser enviados desde que empezó a funcionar. Debe devolver un número entero (buscar cómo hacerlo en la documentación de Number).
+- Saber el porcentaje de eficacia de la mensajería, es decir, el porcentaje de paquetes que lograron ser enviados desde que empezó a funcionar. Debe devolver un número entero (buscar cómo 
+hacerlo en la documentación de Number).
 
 Testear la siguiente situación:
 - La mensajería recibe paquete y paquetito. Agregarle al menos un mejajero que pueda enviar paquetito, dejar paquete impago para que no se pueda enviar.
