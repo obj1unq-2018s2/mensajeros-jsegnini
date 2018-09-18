@@ -17,3 +17,42 @@ test "paquete" {
 	paquete.destino(matrix)
 	assert.equals(true, paquete.puedeSerEnviadoPor(neo))
 }
+
+test "contratar" {
+	mensajeria.contratar(neo)
+	assert.that(mensajeria.empleados().contains(neo))
+}
+
+test "despedir" {
+	mensajeria.despedirATodos()
+	mensajeria.contratar(neo)
+	mensajeria.despedir(neo)
+	assert.that(mensajeria.empleados().isEmpty())
+}
+
+test "despedirTodos" {
+	mensajeria.despedirATodos()
+	assert.that(mensajeria.empleados().isEmpty())
+}
+test "mensajeria grande" {
+	mensajeria.despedirATodos()
+	mensajeria.contratar(neo)
+	mensajeria.contratar(chuckNorris)
+	mensajeria.contratar(roberto)
+	assert.equals(true, mensajeria.esGrande())
+}
+
+test "el primer empleado puede entregar paquete" {
+	mensajeria.contratar(chuckNorris)
+	neo.tieneCredito(false)
+	mensajeria.contratar(neo)
+	paquete.destino(matrix)
+	assert.equals(true, paquete.puedeSerEnviadoPor(mensajeria.empleados().first()))
+}
+
+test "revisar peso del último empleado" {
+	mensajeria.contratar(neo)
+	mensajeria.contratar(chuckNorris)
+	assert.equals(900, mensajeria.empleados().last().peso())
+}
+

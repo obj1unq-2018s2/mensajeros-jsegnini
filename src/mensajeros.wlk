@@ -46,6 +46,7 @@ object matrix {
 	method dejaPasarA(mensajero) = mensajero.puedeLlamar()
 }
 
+//paquete
 
 object paquete {
 	var property estaPago = true
@@ -58,6 +59,7 @@ object paquete {
 
 object mensajeria {
 	var empleados = []
+	method empleados() {return empleados}
 	method nomina() {return empleados}
 	method contratar(alguien) {
 		empleados.add(alguien)
